@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+.card {
+  width: 520px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+h2 {
+  text-align: center;
+  color: #004080;
+  margin: 0 0 10px 0;
+}
+
+.instrucciones {
+  background: #e6ffe6;
+  border: 1px solid #b3ffb3;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.resultado {
+  background: #f9f9f9;
+  border: 1px solid #d7e9f7;
+  padding: 12px;
+  border-radius: 6px;
+  min-height: 44px;
+  margin: 12px 0;
+  font-weight: 600;
+  color: #2b6e9b;
+}
+
+.mensaje-correcto {
+  background: #e9f7ee;
+  border-left: 4px solid #2ecc71;
+  color: #155724;
+}
+
+.mensaje-incorrecto {
+  background: #fdecea;
+  border: 1px solid #e74c3c;
+  color: #8b1f1f;
+}
+
+.btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover { filter: brightness(.92); }
+
+footer {
+  text-align: center;
+  margin-top: 12px;
+  color: #666;
+  font-size: 0.9rem;
+}

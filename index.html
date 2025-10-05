@@ -1,0 +1,68 @@
+<html>
+
+<head>
+ 
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quinta Serie - Práctico 5 · Ejercicio 05</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2> Ejercicio 05: ¿Está en el primer, segundo rango o fuera?</h2>
+
+    <div class="instrucciones">
+      <h3> Instrucciones</h3>
+      <p>Este ejercicio comprobará si una variable <strong>valor</strong> se encuentra en alguno de los dos rangos válidos:</p>
+      <ul>
+        <li>Primer rango: 100 a 300</li>
+        <li>Segundo rango: 500 a 800</li>
+      </ul>
+      <p>Si no está en ninguno, se mostrará un mensaje de fuera de rango.</p>
+    </div>
+
+   
+    <div id="mensaje" class="resultado" aria-live="polite">
+      Haz clic en "Ejecutar" para verificar.
+    </div>
+
+ 
+    <button id="btnEjecutar" class="btn" type="button">¡Ejecutar Ejercicio!</button>
+
+    <footer>Curso de JavaScript · Enseñanza Media | Ejercicio 05</footer>
+  </div>
+
+
+  <script>
+    function verificarRangos() {
+ 
+      let valor = 50; 
+      let mensaje = document.getElementById('mensaje');
+
+    
+      mensaje.classList.remove('mensaje-correcto', 'mensaje-incorrecto');
+
+      if (valor >= 100 && valor <= 300) {
+        mensaje.innerText = ' El valor ' + valor + ' está dentro del PRIMER rango (100–300).';
+        mensaje.classList.add('mensaje-correcto');
+        console.log('verificarRangos(): valor = ' + valor + ' → PRIMER rango');
+      } else if (valor >= 500 && valor <= 800) {
+        mensaje.innerText = ' El valor ' + valor + ' está dentro del SEGUNDO rango (500–800).';
+        mensaje.classList.add('mensaje-correcto');
+        console.log('verificarRangos(): valor = ' + valor + ' → SEGUNDO rango');
+      } else {
+        mensaje.innerText = ' El valor ' + valor + ' no está en ninguno de los rangos válidos.';
+        mensaje.classList.add('mensaje-incorrecto');
+        console.log('verificarRangos(): valor = ' + valor + ' → FUERA de los rangos');
+      }
+    }
+
+ 
+    let btnEjecutar = document.getElementById('btnEjecutar');
+    btnEjecutar.onclick = verificarRangos;
+
+  
+    console.log('Script cargado: botón #btnEjecutar enlazado a verificarRangos; listo para ejecutar.');
+  </script>
+</body>
+</html>
